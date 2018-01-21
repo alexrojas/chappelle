@@ -1,0 +1,28 @@
+
+
+
+
+<% if @joke.errors.any? %>
+<h2>Fix the following Errors, or im Shutting down the Studio</h2>
+  <ul>
+  <% @joke.errors.full_messages.each do |msg|   %>
+  <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end  %>
+
+
+
+<%= form_for @joke do |f| %>
+<p>
+  <%= f.label :title %> <br>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :description %> <br>
+  <%= f.text_area :description %>
+</p>
+<p>
+  <%= f.submit  %> <br>
+</p>
+<% end  %>
