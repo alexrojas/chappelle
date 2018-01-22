@@ -11,7 +11,7 @@ module DavidApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     config.serve_static_assets = true
-    config.assets.precompile += %w(/assets/images/*)
+    config.assets.compile = true
 
 
     # Settings in config/environments/* take precedence over those specified here.
